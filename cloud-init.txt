@@ -1,5 +1,6 @@
 #!/bin/sh
 echo -e "new_password" | (passwd --stdin centos)
+yum update -y
 
 #cloud-config
 package_upgrade: true
