@@ -1,6 +1,21 @@
 #!/bin/sh
 echo -e "new_password" | (passwd --stdin centos)
-yum update -y
+sudo yum update -y
+
+sudo yum install -y ntp
+ntpdate pool.ntp.org
+sudo systemctl enable ntpd
+sudo systemctl start ntpd
+
+sudo yum install -y epel-release
+sudo yum install -y fail2ban fail2ban-systemd
+
+sudo systemctl enable firewalld
+sudo systemctl start firewalld
+sudo systemctl enable fail2ban
+sudo systemctl start fail2ban
+
+sudo reboot
 
 #cloud-config
 package_upgrade: true
