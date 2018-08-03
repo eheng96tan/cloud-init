@@ -8,7 +8,7 @@ package:
  - fail2ban-systemd
 
 runcmd:
- - echo -e "new_password" | (passwd --stdin centos)
+ - echo -e "new_password" | (passwd --stdin root)
  - sudo yum update -y
  - ntpdate pool.ntp.org
  - sudo systemctl enable ntpd
