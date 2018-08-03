@@ -1,7 +1,6 @@
-#FOR CENTOS USE ONLY 
 
 #!/bin/sh
-echo -e "new_password" | (passwd --stdin root)
+echo -e "new_password" | (passwd --stdin centos)
 
 #cloud-config
  
