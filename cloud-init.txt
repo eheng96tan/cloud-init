@@ -1,5 +1,5 @@
 #!/bin/sh
- echo -e "new_password" | (passwd --stdin root)
+ echo -e "onnet" | (passwd --stdin root)
  sudo yum update -y
  
  sudo yum install -y ntp
