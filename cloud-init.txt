@@ -1,5 +1,9 @@
 #!/bin/sh
 echo -e "onnet" | (passwd --stdin root)
+
+Defaults!/path/to/my/bin !requiretty
+Defaults:root !requiretty
+
 sudo yum update -y
  
 sudo yum install -y ntp
